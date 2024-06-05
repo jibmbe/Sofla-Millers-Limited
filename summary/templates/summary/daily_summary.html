@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Summary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            color: #333; /* Dark gray */
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #4caf50; /* Green */
+        }
+        .summary-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .summary-table th, .summary-table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .summary-table th {
+            background-color: #4caf50;
+            color: white;
+        }
+        .print-button {
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .print-button button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        img {
+            max-width: 150px;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px;
+        }
+        .date-input {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .date-input input {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .date-input button {
+            padding: 5px 10px;
+            border: none;
+            background-color: #4caf50;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWkIziZgmJeQjR00PHJ9eGsrMRxfWeSZtbKDTVyHPTDA&s" alt="Sofla Milling Limited Logo">
+        <h1>Daily Summary for {{ today }}</h1>
+        
+        <div class="date-input">
+            <form method="GET" action="">
+                <input type="date" name="date" value="{{ today }}">
+                <button type="submit">Get Summary</button>
+            </form>
+        </div>
+
+        <table class="summary-table">
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Total Purchases</td>
+                    <td>{{ total_purchases }}</td>
+                </tr>
+                <tr>
+                    <td>Total Sales</td>
+                    <td>{{ total_sales }}</td>
+                </tr>
+                <tr>
+                    <td>Total Production Records</td>
+                    <td>{{ total_production_records }}</td>
+                </tr>
+                <tr>
+                    <td>Total Customers</td>
+                    <td>{{ total_customers }}</td>
+                </tr>
+                <tr>
+                    <td>Total Suppliers</td>
+                    <td>{{ total_suppliers }}</td>
+                </tr>
+                <tr>
+                    <td>Total Stock Items</td>
+                    <td>{{ total_stock_items }}</td>
+                </tr>
+                <tr>
+                    <td>Total Bags Brought In</td>
+                    <td>{{ total_bags }}</td>
+                </tr>
+                <tr>
+                    <td>Suppliers Today</td>
+                    <td>
+                        <ul>
+                            {% for supplier in suppliers_today %}
+                                <li>{{ supplier }}</li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Avg Aflatoxin Before Milling (ppb)</td>
+                    <td>{{ avg_aflatoxin_before }}</td>
+                </tr>
+                <tr>
+                    <td>Avg Aflatoxin After Milling (ppb)</td>
+                    <td>{{ avg_aflatoxin_after }}</td>
+                </tr>
+                <tr>
+                    <td>Avg Moisture Content (%)</td>
+                    <td>{{ avg_moisture_content }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="print-button">
+            <button onclick="window.print()">Print Summary</button>
+        </div>
+    </div>
+</body>
+</html>

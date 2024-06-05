@@ -1,0 +1,148 @@
+{% extends 'website/base.html' %}
+
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<div class="welcome-section">
+    <h1>Welcome to Sofla Milling Limited</h1>
+    <p class="welcome-text">
+        <i class="fas fa-seedling"></i> Sofla Milling Limited welcomes you to a world of premium maize products, carefully crafted to meet your culinary and nutritional needs. Our dedication to quality and customer satisfaction sets us apart in the industry.
+    </p>
+    <p class="welcome-text">
+        <i class="fas fa-industry"></i> With our cutting-edge facilities and a team of passionate experts, we ensure that each product embodies the essence of freshness and purity. Whether you're a professional chef, a home cook, or a food enthusiast, Sofla Milling Limited is your trusted partner for top-notch maize products.
+    </p>
+    <p class="welcome-text">
+        <i class="fas fa-leaf"></i> Sustainability is at the core of Sofla Milling Limited's ethos. We prioritize eco-friendly practices and ethical sourcing to minimize our environmental footprint and support local communities. Every purchase you make contributes to our shared goal of a greener, healthier planet.
+    </p>
+    <p class="welcome-text">
+        <i class="fas fa-globe"></i> Dive into our website to discover a diverse range of maize products, from fine maize flour to nutritious maize germ. Explore our recipes, learn about our sustainable initiatives, and join us in our mission to revolutionize the maize industry. Let's embark on a journey of taste, health, and sustainability together!
+    </p>
+</div>
+
+<div class="commitment-section">
+    <h2><i class="fas fa-handshake"></i> Our Commitment</h2>
+    <ul>
+        <li><strong><i class="fas fa-lightbulb"></i> Innovation:</strong> We continuously innovate to bring you new and exciting maize products that cater to your evolving tastes and preferences.</li>
+        <li><strong><i class="fas fa-check-circle"></i> Quality Assurance:</strong> Each product undergoes rigorous quality checks to ensure that it meets our stringent standards of excellence.</li>
+        <li><strong><i class="fas fa-heart"></i> Customer Satisfaction:</strong> Your satisfaction is our priority. We are dedicated to providing you with exceptional products and services that exceed your expectations.</li>
+        <li><strong><i class="fas fa-users"></i> Community Engagement:</strong> We actively engage with local communities and support initiatives that promote education, health, and economic empowerment.</li>
+    </ul>
+</div>
+
+<div class="team-section">
+    <h2><i class="fas fa-users"></i> Meet Our Team</h2>
+    <ul>
+        <li><strong><i class="fas fa-user-tie"></i> Mr Solomon Njaramba:</strong> CEO and Chief Maize Maestro</li>
+        
+        <li><strong><i class="fas fa-user-tie"></i> Michelle Lee:</strong> Quality Control Guru</li>
+        <li><strong><i class="fas fa-user-tie"></i> David Martinez:</strong> Sustainability Champion</li>
+    </ul>
+</div>
+
+<div class="testimonials-section">
+    <h2><i class="fas fa-comment"></i> Customer Testimonials</h2>
+    <blockquote>
+        <p>"Sofla Milling Limited's maize flour adds a delightful flavor and texture to my baked goods. It's a must-have in my kitchen!"</p>
+        <footer>- Jessica Thompson, Home Baker</footer>
+    </blockquote>
+    <blockquote>
+        <p>"I'm impressed by Sofla Milling Limited's commitment to sustainability. Their eco-friendly practices resonate with my values as a conscious consumer."</p>
+        <footer>- Mark Johnson, Environmental Advocate</footer>
+    </blockquote>
+    <blockquote>
+        <p>"As a professional chef, I rely on Sofla Milling Limited's maize products to create culinary masterpieces. The quality and freshness are unmatched!"</p>
+        <footer>- Chef Michael Ramirez, Culinary Artist</footer>
+    </blockquote>
+</div>
+
+<style>
+    /* Additional CSS styles for the welcome page */
+    .welcome-section {
+        margin-bottom: 40px;
+        background-color: #ffffe0; /* Light Yellow */
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .welcome-text {
+        margin-bottom: 20px;
+    }
+
+    .commitment-section,
+    .team-section,
+    .testimonials-section {
+        background-color: #ffffe0; /* Light Yellow */
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 40px;
+    }
+
+    .commitment-section h2,
+    .team-section h2,
+    .testimonials-section h2 {
+        margin-bottom: 20px;
+    }
+
+    .commitment-section ul,
+    .team-section ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .commitment-section li,
+    .team-section li {
+        margin-bottom: 10px;
+        line-height: 1.6;
+    }
+
+    .testimonials-section blockquote {
+        margin-bottom: 20px;
+        border-left: 4px solid #4caf50; /* Green border */
+        padding-left: 15px;
+    }
+
+    .testimonials-section blockquote p {
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+        color: #333;
+    }
+
+    .testimonials-section blockquote footer {
+        font-style: italic;
+        color: #666;
+    }
+
+    .testimonials-section blockquote:before,
+    .testimonials-section blockquote:after {
+        font-size: 2rem;
+        color: #4caf50; /* Green color */
+    }
+
+    .testimonials-section blockquote:before {
+        content: "\201C"; /* Left double quotation mark */
+        margin-right: 5px;
+    }
+
+    .testimonials-section blockquote:after {
+        content: "\201D"; /* Right double quotation mark */
+        margin-left: 5px;
+    }
+
+    h1, h2, label {
+        color: #4caf50; /* Green */
+    }
+
+    .btn-primary {
+        background-color: #4caf50; /* Green */
+        color: #fff; /* White */
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s; /* Smooth transition */
+    }
+
+    .btn-primary:hover {
+        background-color: #388e3c; /* Darker Green on hover */
+    }
+</style>
+{% endblock %}

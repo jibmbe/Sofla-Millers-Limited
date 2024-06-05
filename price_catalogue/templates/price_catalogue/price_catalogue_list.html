@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Catalogue</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #d9534f;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        ul li .item-name {
+            flex: 1;
+            font-weight: bold;
+        }
+        ul li .item-price {
+            margin-left: 20px;
+            color: #333;
+        }
+        ul li .item-date {
+            color: #666;
+            font-size: 0.9em;
+            margin-left: 20px; /* Added margin */
+        }
+        .icon {
+            margin-right: 10px;
+            color: #d9534f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Price Catalogue</h1>
+        <ul>
+            {% for price_catalogue_item in price_catalogue_items %}
+                <li>
+                    <span class="item-name">
+                        <i class="fas fa-tag icon"></i>{{ price_catalogue_item.item_name }}
+                    </span>
+                    <span class="item-price">Ksh{{ price_catalogue_item.unit_price }}</span>
+                    <span class="item-date">{{ price_catalogue_item.effective_date }}</span>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

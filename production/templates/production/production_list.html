@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Production List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #d9534f;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        ul li .product-name {
+            flex: 1;
+            font-weight: bold;
+        }
+        ul li .quantity-produced {
+            margin-left: 20px;
+            color: #333;
+        }
+        ul li .production-date {
+            color: #666;
+            font-size: 0.9em;
+            margin-left: 20px; /* Added margin */
+        }
+        .icon {
+            margin-right: 10px;
+            color: #d9534f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Production List</h1>
+        <ul>
+            {% for production_record in production_records %}
+                <li>
+                    <span class="product-name">
+                        <i class="fas fa-cogs icon"></i>{{ production_record.product_name }}
+                    </span>
+                    <span class="quantity-produced">Quantity: {{ production_record.quantity_produced }}</span>
+                    <span class="production-date">{{ production_record.production_date }}</span>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

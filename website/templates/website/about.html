@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofla Milling Limited - About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    {% load static %}
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5dc; /* Light Yellow */
+            color: #006400; /* Dark Green */
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            background-color: #228b22; /* Forest Green */
+            color: #ffffff; /* White */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff; /* White */
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s; /* Smooth transition */
+        }
+
+        nav ul li a:hover {
+            color: #f2f2f2; /* Light Gray */
+            transform: scale(1.1); /* Scale up on hover */
+        }
+
+        .main-content {
+            margin-bottom: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .content-section {
+            background-color: #f0fff0; /* Honeydew */
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Box shadow */
+            padding: 20px;
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+            transition: transform 0.3s; /* Smooth transition */
+        }
+
+        .content-section:hover {
+            transform: translateY(-5px); /* Move up on hover */
+        }
+
+        h2 {
+            color: #006400; /* Dark Green */
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .icon {
+            font-size: 24px;
+            margin-right: 10px;
+            color: #006400; /* Dark Green */
+        }
+
+        footer {
+            text-align: center;
+            color: #ffffff; /* White */
+            margin-top: 50px;
+            background-color: #228b22; /* Forest Green */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-members {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .team-member {
+            text-align: center;
+            max-width: 150px;
+            transition: transform 0.3s; /* Smooth transition */
+        }
+
+        .team-member img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-member h3 {
+            margin: 10px 0 5px;
+            color: #006400; /* Dark Green */
+        }
+
+        .team-member p {
+            margin: 0;
+            color: #666666; /* Gray */
+        }
+
+        .content-section h2::before {
+            content: "\f0da"; /* FontAwesome icon */
+            font-family: 'Font Awesome 5 Free';
+            margin-right: 10px;
+            color: #006400; /* Dark Green */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>About Us - Sofla Milling Limited</h1>
+                <nav>
+            <ul>
+                <li><a href="{% url 'home' %}"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="{% url 'about' %}"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="{% url 'portfolio' %}"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+                <li><a href="{% url 'pricing' %}"><i class="fas fa-dollar-sign"></i> Pricing</a></li>
+                <li><a href="{% url 'contact' %}"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="main-content">
+        <div class="content-section">
+            <h2>Welcome to Sofla Milling Limited</h2>
+            <p>At Sofla Milling Limited, we pride ourselves on being a leading provider of high-quality maize products,
+                including maize bran and maize germ. Our dedication to excellence and innovation has established us as
+                a trusted name in the industry.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Our History</h2>
+            <p>Founded in [Year], Sofla Milling Limited has grown from a small local mill to a major supplier of maize
+                products. Our journey has been marked by a commitment to quality, customer satisfaction, and sustainable
+                practices. Over the years, we have expanded our operations, embraced new technologies, and continuously
+                improved our processes to ensure we meet the highest standards.</p>
+            <p>Our growth has been fueled by our unwavering focus on innovation and excellence. We started with a single
+                milling plant, and today we operate multiple state-of-the-art facilities that employ the latest milling
+                technologies. This expansion has enabled us to increase our production capacity, improve our product
+                quality, and better serve our customers.</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>What We Do</h2>
+         <p>We specialize in processing and supplying a variety of maize products. Our state-of-the-art facilities ensure
+            that we produce     the finest quality products to meet the needs of our diverse clientele. Our state-of-the-art facilities are equipped with advanced technology and machinery, allowing us to carry out efficient processing and production processes. From cleaning and sorting to milling and packaging, we maintain strict quality control at every step to ensure the purity, freshness, and nutritional integrity of our maize products.</p>
+</section>
+
+<section class="content-section">
+    <h2>Our Mission</h2>
+    <p>Our mission is to provide superior maize products that enhance the health and well-being of our customers while maintaining the highest standards of sustainability and ethical practices. We are committed to innovation, quality, and customer satisfaction.</p>
+    <p>We strive to be at the forefront of the milling industry, continuously improving our processes and products to meet the evolving needs of our customers. Our mission drives us to seek out new opportunities for growth and development, always with a focus on delivering the best possible value to our customers.</p>
+</section>
+
+<section class="content-section">
+    <h2>Our Vision</h2>
+    <p>To be the most trusted and innovative provider of maize products, recognized for our commitment to quality, sustainability, and community development.</p>
+    <p>We envision a future where Sofla Milling Limited is synonymous with excellence and innovation in the milling industry. Our vision includes expanding our reach to new markets, developing new products that meet the changing needs of our customers, and continuing to make a positive impact on the communities we serve.</p>
+</section>
+
+<section class="content-section">
+    <h2>Our Values</h2>
+    <ul>
+        <li><i class="fas fa-star icon"></i><strong>Quality:</strong> We are dedicated to producing the highest quality products to meet and exceed our customers' expectations. Quality is at the core of everything we do, from sourcing the best raw materials to implementing rigorous quality control processes at every stage of production.</li>
+        <li><i class="fas fa-handshake icon"></i><strong>Integrity:</strong> We conduct our business with the utmost integrity and transparency. We believe in doing the right thing, always, and maintaining the trust of our customers, employees, and partners.</li>
+        <li><i class="fas fa-leaf icon"></i><strong>Sustainability:</strong> We are committed to sustainable practices that protect and preserve our environment. Our sustainability initiatives include reducing our carbon footprint, minimizing waste, and promoting the responsible use of resources.</li>
+        <li><i class="fas fa-lightbulb icon"></i><strong>Innovation:</strong> We continuously seek innovative solutions to improve our products and processes. Our commitment to innovation drives us to
+        <li><i class="fas fa-lightbulb icon"></i><strong>Innovation:</strong> We continuously seek innovative solutions to improve our products and processes. Our commitment to innovation drives us to explore new technologies, develop new products, and find better ways to serve our customers.</li>
+        <li><i class="fas fa-users icon"></i><strong>Customer Focus:</strong> Our customers are at the heart of everything we do, and we strive to build lasting relationships based on trust and satisfaction. We listen to our customers, understand their needs, and go above and beyond to exceed their expectations.</li>
+    </ul>
+</section>
+
+<section class="content-section">
+    <h2>Our Team</h2>
+    <p>Our team is composed of dedicated professionals with extensive experience in the milling industry. Their expertise and commitment to excellence drive our success and ensure that we deliver the best products and services to our customers.</p>
+    <p>From our skilled mill operators to our knowledgeable customer service representatives, every member of the Sofla Milling Limited team plays a vital role in our operations. We invest in our employees' development, providing ongoing training and opportunities for growth to ensure they have the skills and knowledge needed to excel in their roles.</p>
+    <div class="team-members">
+        <div class="team-member">
+            <img src="{% static 'images/my pic.jpeg' %}" alt="John Doe" class="team-member-img">
+            <h3>John Doe</h3>
+            <p>Position: Mill Operator</p>
+        </div>
+        <div class="team-member">
+            <img src="{% static 'images/team-member-2.jpg' %}" alt="Jane Smith" class="team-member-img">
+            <h3>Jane Smith</h3>
+            <p>Position: Customer Service Representative</p>
+        </div>
+        <!-- Add more team members as needed -->
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Sofla Milling Limited. All rights reserved.</p>
+</footer>
+
+</body>
+
+</html>
+

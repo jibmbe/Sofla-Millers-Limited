@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofla Millers Limited</title>
+    {% load static %}
+    <style>
+        /* CSS styles for the base HTML */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffe0; /* Light Yellow */
+        }
+
+        nav {
+            position: relative; /* Set position to relative */
+            background-color: #4caf50; /* Green */
+            padding: 10px 0; /* Reduced padding */
+            text-align: center; /* Center the logo and navigation links */
+        }
+
+        nav img {
+            position: absolute; /* Set position to absolute */
+            top: 50%; /* Align to the vertical middle */
+            transform: translateY(-50%); /* Adjust for vertical centering */
+            left: 10px; /* Adjust distance from left */
+            width: 60px; /* Further reduced width */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            display: inline-block; /* Display as inline-block */
+            vertical-align: middle; /* Align vertically */
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff; /* White */
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s; /* Smooth transition */
+        }
+
+        nav ul li a:hover {
+            color: #f2f2f2; /* Light Gray */
+            transform: scale(1.1); /* Scale up on hover */
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        h1 {
+            color: #4caf50; /* Green */
+        }
+
+        p {
+            line-height: 1.6;
+            color: #333333; /* Dark Gray */
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWkIziZgmJeQjR00PHJ9eGsrMRxfWeSZtbKDTVyHPTDA&s" alt="Sofla Milling Limited Logo">
+    <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About Us</a></li>
+        <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+        <li><a href="{% url 'pricing' %}">Pricing</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+    </ul>
+</nav>
+<div class="content">
+    {% block content %}
+    <h1>Welcome to Sofla Milling Limited</h1>
+    <p>Sofla Milling Limited is a premier provider of high-quality maize products, specializing in maize bran, maize germ, maize flour, and more. Our commitment to excellence and innovation has made us a trusted name in the industry.</p>
+
+    <p>With state-of-the-art facilities and a dedicated team of professionals, we ensure that every product meets the highest standards of quality and purity. Whether you're a livestock feed manufacturer, a food processor, or a health enthusiast, you can rely on Sofla Milling Limited for all your maize product needs.</p>
+
+    <p>At Sofla Milling Limited, we believe in sustainable practices and ethical sourcing. We work closely with local farmers to ensure that our maize is of the highest quality and that our operations have a positive impact on the community and the environment.</p>
+
+    <p>Explore our website to learn more about our products, our process, and how we can meet your specific requirements. If you have any questions or would like to discuss a custom order, don't hesitate to contact us. We look forward to serving you!</p>
+    {% endblock %}
+</div>
+</body>
+</html>

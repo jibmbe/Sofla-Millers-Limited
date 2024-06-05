@@ -1,0 +1,92 @@
+{% extends 'website/base.html' %}
+
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<h1>Portfolio</h1>
+
+<!-- Add the image related to maize milling equipment -->
+<div class="portfolio-image">
+    <img src="https://source.unsplash.com/featured/?maize,milling,equipment" alt="Maize Milling Equipment" />
+</div>
+
+<section class="portfolio-section">
+    <h2><i class="fas fa-box-open"></i> Our Products</h2>
+    <p>Explore our diverse range of high-quality maize products:</p>
+    <ul>
+        <li><strong>Maize Flour:</strong> Our maize flour is finely milled from premium-quality maize grains, perfect for baking, cooking, and making traditional dishes.</li>
+        <li><strong>Maize Bran:</strong> Rich in fiber and nutrients, our maize bran is an excellent choice for livestock feed and agricultural applications. <br> <img src="https://wimaflourmillinglimited.com/images/Maize-Germ.jpg" alt="Maize Bran" style="max-width: 200px; margin-top: 10px;"></li>
+        <li><strong>Maize Germ:</strong> Packed with vitamins, minerals, and healthy fats, our maize germ is ideal for food processing, health supplements, and animal nutrition. <br> <img src="https://wimaflourmillinglimited.com/images/img-20180314-wa00011433630798.jpg" alt="Maize Germ" style="max-width: 200px; margin-top: 10px;"></li>
+        <!-- Add more products as needed -->
+    </ul>
+</section>
+
+<section class="portfolio-section">
+    <h2><i class="fas fa-project-diagram"></i> Our Projects</h2>
+    <p>Discover some of our recent projects and collaborations:</p>
+    <ul>
+        <li><strong>Community Outreach Program:</strong> We partnered with local organizations to provide maize products to underserved communities, contributing to food security and nutrition.</li>
+        <li><strong>Sustainability Initiative:</strong> Our ongoing efforts to reduce waste, conserve resources, and minimize our environmental impact demonstrate our commitment to sustainability.</li>
+        <li><strong>Product Development:</strong> Our research and development team is constantly innovating to create new and improved maize products that meet the evolving needs of our customers.</li>
+        <!-- Add more projects as needed -->
+    </ul>
+</section>
+
+<section class="portfolio-section">
+    <h2><i class="fas fa-handshake"></i> Our Partnerships</h2>
+    <p>We value our partnerships with suppliers, distributors, and other stakeholders:</p>
+    <ul>
+        <li><strong>Supplier Relationships:</strong> We work closely with trusted suppliers to source the highest quality maize grains and other raw materials for our products.</li>
+        <li><strong>Distribution Networks:</strong> Our extensive distribution networks ensure that our products reach customers efficiently and on time, wherever they are.</li>
+        <li><strong>Industry Collaborations:</strong> We collaborate with industry experts, researchers, and organizations to share knowledge, exchange ideas, and drive innovation in the milling industry.</li>
+        <!-- Add more partnership details as needed -->
+    </ul>
+</section>
+
+<style>
+    /* Additional CSS styles for the portfolio page */
+    .portfolio-section {
+        background-color: #ffffe0; /* Light Yellow */
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .portfolio-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        color: #4caf50; /* Green */
+    }
+
+    .portfolio-section p {
+        margin-bottom: 15px;
+    }
+
+    .portfolio-section ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .portfolio-section li {
+        margin-bottom: 10px;
+        line-height: 1.5;
+    }
+
+    /* CSS for the portfolio image */
+    .portfolio-image {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .portfolio-image img {
+        max-width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2 {
+        color: #4caf50; /* Green */
+    }
+</style>
+
+{% endblock %}

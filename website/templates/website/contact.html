@@ -1,0 +1,119 @@
+{% extends 'website/base.html' %}
+
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <h1>Contact Us</h1>
+
+    <section class="main-content">
+        <div class="content-section">
+            <h2><i class="fas fa-envelope"></i> Get in Touch</h2>
+            <p>If you have any questions or would like to learn more about our products and services, please don't hesitate to contact us. Our team is here to assist you and provide the information you need.</p>
+        </div>
+
+        <div class="content-section contact-info">
+            <h2><i class="fas fa-info-circle"></i> Contact Information</h2>
+            <ul>
+                <li><i class="fas fa-envelope"></i> <strong>Email:</strong> info@soflamillinglimited.com</li>
+                <li><i class="fas fa-phone"></i> <strong>Phone:</strong> (254) 726 008 017</li>
+                <li><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> 00520 , Afro-Sayari-Ruai, Kenya</li>
+            </ul>
+        </div>
+
+        <div class="content-section contact-form">
+            <h2><i class="fas fa-envelope"></i> Send Us a Message</h2>
+            <p>Feel free to send us a message using the form below. We'll get back to you as soon as possible.</p>
+            <form method="post" action="{% url 'contact_submit' %}">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="name"><i class="fas fa-user"></i> Your Name:</label><br>
+                    <input type="text" id="name" name="name" class="form-control" required><br>
+                </div>
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope"></i> Your Email:</label><br>
+                    <input type="email" id="email" name="email" class="form-control" required><br>
+                </div>
+                <div class="form-group">
+                    <label for="message"><i class="fas fa-comment"></i> Your Message:</label><br>
+                    <textarea id="message" name="message" rows="4" class="form-control" required></textarea><br>
+                </div>
+                <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <style>
+        /* Additional CSS styles for the contact page */
+        .content-section {
+            background-color: #ffffe0; /* Light Yellow */
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Box shadow */
+            padding: 20px;
+            margin-bottom: 30px;
+            transition: transform 0.3s; /* Smooth transition */
+        }
+
+        .content-section:hover {
+            transform: translateY(-5px); /* Move up on hover */
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #4caf50; /* Green */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #4caf50; /* Green */
+            box-sizing: border-box;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button[type="submit"] {
+            background-color: #4caf50; /* Green */
+            color: #fff; /* White */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        button[type="submit"]:hover {
+            background-color: #388e3c; /* Darker Green on hover */
+        }
+
+        .contact-info {
+            background-color: #fff; /* White */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Box shadow */
+            padding: 20px;
+            color: #333333; /* Dark Gray */
+        }
+
+        .contact-info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .contact-info li {
+            padding: 5px 0;
+            color: #666666; /* Gray */
+        }
+
+        .contact-info li:hover {
+            background-color: #f2f2f2; /* Light Gray on hover */
+        }
+    </style>
+{% endblock %}

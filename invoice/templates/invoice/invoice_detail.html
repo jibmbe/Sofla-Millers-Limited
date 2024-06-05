@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice {{ invoice.invoice_number }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4; /* Light gray */
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #ffffcc; /* Light yellow */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            overflow: hidden;
+        }
+        .print-button {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .print-button button {
+            background-color: #4caf50; /* Green */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .print-button button:hover {
+            background-color: #45a049; /* Dark green */
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .header .logo {
+            width: 150px;
+        }
+        .addresses {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .addresses div {
+            width: 45%;
+        }
+        .invoice-box {
+            text-align: center;
+        }
+        .invoice-box h1 {
+            color: #4caf50; /* Green */
+            margin-bottom: 20px;
+        }
+        .invoice-details {
+            text-align: left;
+            margin-top: 20px;
+            padding: 20px;
+            border-top: 2px solid #4caf50; /* Green */
+        }
+        .invoice-details p {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .invoice-details p:last-child {
+            border-bottom: none;
+        }
+        .invoice-details p i {
+            margin-right: 10px;
+            color: #4caf50; /* Green */
+        }
+        .invoice-details p strong {
+            flex: 1;
+        }
+        .invoice-summary {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #d9ead3; /* Light green */
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        .invoice-summary table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .invoice-summary table, .invoice-summary th, .invoice-summary td {
+            border: 1px solid #ccc;
+        }
+        .invoice-summary th, .invoice-summary td {
+            padding: 10px;
+            text-align: left;
+        }
+        .invoice-summary h2 {
+            margin-top: 0;
+            color: #4caf50; /* Green */
+            font-size: 1.5em;
+        }
+        .invoice-summary p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .payment-details {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #d9ead3; /* Light green */
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .payment-details p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWkIziZgmJeQjR00PHJ9eGsrMRxfWeSZtbKDTVyHPTDA&s" alt="Sofla Milling Limited Logo" class="logo">
+            <div class="print-button">
+                <button onclick="window.print()"><i class="fas fa-print"></i> Print Invoice</button>
+            </div>
+        </div>
+        <div class="addresses">
+            <div>
+                <p><strong>Customer Name:</strong> {{ invoice.customer.name }}</p>
+                <p><strong>Customer Address:</strong> {{ invoice.customer.address }}</p>
+                <p><strong>Customer Email:</strong> {{ invoice.customer.email }}</p>
+            </div>
+            <div>
+                <p><strong>Salesperson Name:</strong> {{ invoice.salesperson.name }}</p>
+                <p><strong>Salesperson Email:</strong> {{ invoice.salesperson.email }}</p>
+                <p><strong>Salesperson Phone:</strong> {{ invoice.salesperson.phone_number }}</p>
+            </div
+        </div>
+    </div>
+    <div class="invoice-box">
+        <h1>Invoice {{ invoice.invoice_number }}</h1>
+        <div class="invoice-details">
+           <p><i class="fas fa-calendar-day"></i><strong>Issue Date:</strong> {{ invoice.issue_date }}</p>
+            <p><i class="fas fa-calendar-check"></i><strong>Due Date:</strong> {{ invoice.due_date }}</p>
+            <p><i class="fas fa-tags"></i><strong>Sale:</strong> {{ invoice.sale }}</p>
+            <p><i class="fas fa-box"></i><strong>Batch Number:</strong> {{ invoice.batch.batch_number }}</p>
+        </div>
+        <div class="invoice-summary">
+            <h2>Amount to Pay</h2>
+            <table>
+                <tr>
+                    <th>Description</th>
+                    <th>Amount</th>
+                </tr>
+                <tr>
+                    <td>Total Amount</td>
+                    <td>Ksh{{ invoice.amount }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="payment-details">
+        <h2>Payment Details</h2>
+        <p>Make payments to the following bank account:</p>
+        <p><strong>Bank Name:</strong> Equity Bank</p>
+        <p><strong>Paybill:</strong> 247247</p>
+        <p><strong>Account Number:</strong> 12345678</p>
+    </div>
+    <div class="served-by">
+        <p>Served By: Ian Wagatu</p>
+    </div>
+</div>
+</body>
+</html>

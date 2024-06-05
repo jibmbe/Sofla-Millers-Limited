@@ -1,0 +1,133 @@
+{% extends 'website/base.html' %}
+
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<h1>Pricing</h1>
+
+<section class="pricing-section">
+    <div class="pricing-item">
+        <h2>Maize Flour</h2>
+        <div class="pricing-details">
+            <p class="price"><i class="fas fa-money-bill-alt"></i> Ksh 1580 / 1 Kg Bale</p>
+            <p class="features"><i class="fas fa-star"></i> Grade 1 | Sifted and fortified | Timely Delivery | Refundable</p>
+        </div>
+        <div class="pricing-action">
+            <p class="delivery"><i class="fas fa-truck"></i> Free Delivery</p>
+            <a href="#" class="btn-buy"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+        </div>
+    </div>
+
+    <div class="pricing-item">
+        <h2>Maize Flour</h2>
+        <div class="pricing-details">
+            <p class="price"><i class="fas fa-money-bill-alt"></i> Ksh 1550 / 2 Kg Bale</p>
+            <p class="features"><i class="fas fa-star"></i> Grade 1 | Sifted and fortified | Timely Delivery | Refundable</p>
+        </div>
+        <div class="pricing-action">
+            <p class="delivery"><i class="fas fa-truck"></i> Free Delivery</p>
+            <a href="#" class="btn-buy"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+        </div>
+    </div>
+
+    <div class="pricing-item">
+        <h2>Maize Germ</h2>
+        <div class="pricing-details">
+            <p class="price"><i class="fas fa-money-bill-alt"></i> Ksh 1650 / 50 Kg</p>
+            <p class="features"><i class="fas fa-star"></i> High Quality | Resourceful | Discounts and Coupons | Timely Delivery | Refundable</p>
+        </div>
+        <div class="pricing-action">
+            <a href="#" class="btn-buy"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+        </div>
+    </div>
+
+    <div class="pricing-item">
+        <h2>Maize Bran</h2>
+        <div class="pricing-details">
+            <p class="price"><i class="fas fa-money-bill-alt"></i> Ksh 1000 / 40 Kg</p>
+            <p class="features"><i class="fas fa-star"></i> High Quality | Timely Delivery | Resourceful | Discounts and Coupons | Refundable</p>
+        </div>
+        <div class="pricing-action">
+            <a href="#" class="btn-buy"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Additional CSS styles for the pricing page */
+    .pricing-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .pricing-item {
+        background-color: #ffffe0; /* Light Yellow */
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+        width: calc(50% - 20px);
+    }
+
+    .pricing-item h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        color: #4caf50; /* Green */
+    }
+
+    .pricing-details {
+        margin-bottom: 15px;
+    }
+
+    .pricing-details p {
+        margin: 5px 0;
+    }
+
+    .price {
+        font-size: 1.2rem;
+        color: #333;
+    }
+
+    .features {
+        color: #666;
+    }
+
+    .delivery {
+        color: #4caf50; /* Green */
+        margin-bottom: 10px;
+    }
+
+    .btn-buy {
+        background-color: #4caf50; /* Green */
+        color: #fff; /* White */
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .btn-buy:hover {
+        background-color: #388e3c; /* Darker Green on hover */
+    }
+
+    .pricing-action {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .pricing-action a {
+        text-decoration: none;
+    }
+
+    .fa {
+        margin-right: 5px;
+    }
+
+    h1, h2 {
+        color: #4caf50; /* Green */
+    }
+</style>
+
+{% endblock %}
